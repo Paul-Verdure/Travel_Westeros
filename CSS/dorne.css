@@ -1,0 +1,300 @@
+:root {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  --text-primary: #e6e4e4;
+  --text-secondary: #ececec;
+  --bg-primary: #4682b4;
+  --bg-secondary: rgba(13, 23, 41, 0.089);
+  --transition-speed: 200ms;
+}
+
+body {
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+#dorne {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(/images/dorne.jpg);
+  background-position: top;
+  background-size: cover;
+  height: 100vh;
+}
+
+main {
+  margin-left: 5rem;
+  padding: 1rem;
+}
+
+h1 {
+  text-align: center;
+  border: solid var(--text-primary) 5px;
+  color: var(--text-primary);
+  font-size: 3rem;
+  padding: 1rem 1rem 1rem 1rem;
+  margin: 20vh auto 2rem;
+  width: max-content;
+}
+
+p {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-secondary);
+}
+
+.navbar {
+  width: 5rem;
+  position: fixed;
+  background-color: var(--bg-primary);
+  height: 100vh;
+  transition: width 500ms ease;
+  top: 0;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-item:last-child {
+  margin-top: auto;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+}
+
+@keyframes slideIn {
+  0% {
+    margin-top: 0;
+  }
+
+  50% {
+    margin-top: 1rem;
+  }
+
+  100% {
+    margin-top: 0;
+  }
+}
+
+.nav-link svg {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+  animation-name: slideIn;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+.nav-link:hover {
+  color: darkred;
+  background-color: var(--bg-secondary);
+  transition: var(--transition-speed);
+}
+
+.navbar:hover {
+  width: 16rem;
+}
+
+.navbar:hover .link-text {
+  display: inline;
+}
+
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--text-secondary);
+  width: 100%;
+  font-size: 1.5rem;
+  letter-spacing: 0.3ch;
+}
+
+.logo svg {
+  transform: rotate(0deg);
+  transition: transform var(--transition-speed);
+}
+
+.navbar:hover .logo svg {
+  transform: rotate(-360deg);
+}
+
+h2 {
+  color: var(--text-primary);
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  font-weight: bold;
+}
+
+.arrow {
+  height: 2rem;
+  width: 2rem;
+  color: var(--text-primary);
+  margin: 3rem auto 2rem;
+  display: block;
+  animation-name: appear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  cursor: pointer;
+}
+
+.arrowUp {
+  height: 2rem;
+  width: 2rem;
+  color: var(--text-primary);
+  margin: 3rem auto 2rem;
+  display: none;
+  animation-name: appear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  cursor: pointer;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.lordlings {
+  display: none;
+  margin-top: 4rem;
+}
+
+.lordlings-list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+.lordlings-list img {
+  height: 10rem;
+  border-radius: 50%;
+  margin: auto 1rem auto 1rem;
+}
+
+.lordlings-list img:hover {
+  height: 10.5rem;
+  filter: brightness(150%);
+  transition: height 0.9s;
+  transition: filter 0.9s;
+  cursor: pointer;
+}
+
+.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+
+  .navbar:hover {
+    width: 100vw;
+    height: 5rem;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
+
+  h1 {
+    margin: 5vh auto 2rem;
+  }
+
+  main {
+    margin: 0;
+  }
+
+  link-text:hover {
+    display: none;
+  }
+
+  .navbar:hover .link-text {
+    display: none;
+  }
+
+  .nav-link svg {
+    width: 1rem;
+    min-width: 1rem;
+    margin: 0 1rem;
+  }
+
+  #contact {
+    display: none;
+  }
+
+  .lordlings-list img {
+    height: 5rem;
+  }
+
+  .lordlings-list {
+    font-size: 1rem;
+  }
+
+  .lordlings-list img:hover {
+    height: 6rem;
+    filter: brightness(150%);
+    transition: height 0.9s;
+    transition: filter 0.9s;
+    cursor: pointer;
+  }
+
+  .mobile {
+    display: flex;
+    justify-content: space-between;
+    margin: 5rem;
+    color: var(--text-primary);
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .mobile a:visited {
+    color: var(--text-secondary);
+  }
+}

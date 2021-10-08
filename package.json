@@ -1,0 +1,11 @@
+{
+  "name": "travel_westeros",
+  "version": "1.0.0",
+  "description": "Here is a website project for a travel agency in Westeros looking to seduce clients from outside the continent. All the quotes, fictional characters, and places are taken from the fantasy saga \"A Song of Ice and Fire\".",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
