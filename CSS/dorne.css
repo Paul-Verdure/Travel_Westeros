@@ -16,7 +16,7 @@ body {
 
 #dorne {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(/images/dorne.jpg);
+    url(../images/dorne.jpg);
   background-position: top;
   background-size: cover;
   height: 100vh;

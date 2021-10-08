@@ -16,7 +16,7 @@ body {
 
 #stormlands {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(/images/stormlands2.jpg);
+    url(../images/stormlands2.jpg);
   background-position: top;
   background-size: cover;
   height: 100vh;

@@ -14,17 +14,9 @@ body {
   padding: 0;
 }
 
-#index {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(/images/landing2.jpg);
-  background-position: top;
-  background-size: cover;
-  height: 100vh;
-}
-
 #north {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(/images/north.jpg);
+    url(../images/north.jpg);
   background-position: top;
   background-size: cover;
   height: 100vh;
